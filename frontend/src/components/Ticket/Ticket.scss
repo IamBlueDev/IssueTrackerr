@@ -1,0 +1,14 @@
+@import './../../styles/base.scss';
+
+.Ticket{
+    background: white;
+    width: 25rem;
+    height: 5rem;
+    position: absolute;
+    top: 15rem;
+    left: 10rem;
+   
+    @include respond-to('small'){
+        background: red;
+    }
+}

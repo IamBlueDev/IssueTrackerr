@@ -1,0 +1,182 @@
+@import '../../styles/base.scss';
+
+.sideBar{
+    position: relative;
+    background: $main;
+    &.Open{
+@include respond-to('small'){
+    height: 100vh;
+    width: 10rem;
+    overflow: hidden;
+    background: rgba(white,0.5);
+    >.User{
+        background: rgba($color: white, $alpha: .7);
+        height: 25vh;
+        width: 10rem;
+        // width
+        >.Icon{
+            width: 50px;
+            height: 50px;
+            color:brown;    
+            background: transparent;
+            margin:  0.5rem 0rem .2rem 3.5rem;
+        }
+        >.Name{
+            
+            font-weight: 600;
+            width: 10rem;
+            height: 1.5rem;
+            overflow: hidden;
+            text-align: center;
+        }
+    }
+    >.Navigation{
+        height: 50vh;
+        background:rgba($color: white, $alpha: 0.5);
+        >li{
+            list-style: none;
+            text-align: center;
+        }
+    }
+    .Footer{
+        background: rgba($color: white, $alpha: .7);
+        height: 25vh;
+        font-weight: 100;
+        text-align: center;
+
+    }
+    
+}
+@include respond-to('medium'){
+    height: 100vh;
+    width: 10rem;
+    overflow: hidden;
+    background: rgba(white,0.5);
+}
+@include respond-to('large'){
+    height: 100vh;
+    width: 5vw;
+}
+    }
+    &.Compact{
+        @include respond-to('small'){
+            display: none;
+            &.visable{
+                display: inherit;
+            }
+            background: rgba($color: white, $alpha: 0.5);
+
+        }
+        @include respond-to('medium'){
+            width: 2.5rem;
+            // background: white;
+
+            height: 100vh;
+            display: inherit;
+            >.User{
+                background: rgba($color: white, $alpha: .7);
+                >.Icon{
+                    margin: 1rem 1rem 1rem .5rem;
+                    width: 25px;
+                    height: 25px;
+                }
+                >.Name{
+                    display: none;
+                }
+            }
+            >.Navigation{
+                >li{
+                    list-style: none;
+                    display: flex;
+                    width: 2.5rem;
+                    flex-wrap: wrap;
+                    >.Icon{
+                        // background: red;
+                        width: 25px;
+                        height: 25px;
+                        padding: .5rem;
+                        // margin: 0 0 0 1rem;
+                    }
+                    p{
+                        display: none;
+                    }
+                    padding: 1rem 0 1rem 0;
+                
+                    // margin: 0 0 1rem 0;
+                    // background: blue;
+                    // display: none;
+                }
+            }
+            .Footer{
+                width: 2.5rem;
+                height: 100vh;
+                position: relative;
+                >.TextContainer{
+                    height: 100vh;
+                    // background: blue;
+                    >p{
+                        // width: 15rem;
+                        // background: green;
+                        // height: 5rem;
+                        
+                        transform: rotate(-90deg);
+                        position: absolute;
+                        top: 15rem;
+                        // bottom: 10rem;
+                        // width: 10rem;
+                        // height: 2.5rem;
+                        // background: green;
+                        // width: 10rem;
+                        // height: auto;
+                        // position: absolute;
+                        // left: -2rem;
+                    }
+                }
+                // margin:  6rem 0 0rem 0;
+                // height: 25vh;
+                // background: black;
+                // position: absolute;
+                // top: 10rem;
+                // left: -5rem;
+                // background: black;
+                // bottom: 6rem;
+                // overflow: hidden;
+                // bottom: 0;
+                background: rgba($color: white, $alpha: .5);
+            }
+            overflow: hidden;
+        }
+        @include respond-to('large'){
+            >.User{
+                
+            }
+            >.Navigation{
+                >li{
+                    display: inherit;
+                    >.Icon{
+                        // background: red;
+                        width: 25px;
+                        height: 25px;
+                        margin: 1rem 1rem 0rem .5rem;
+                        
+                    }
+                    >p{
+                        display: none;
+                        font-size: 8px;
+                        font-weight: 400;
+                    }
+                }
+            }
+            >.Footer{
+                // background:black;
+                bottom: 12rem;
+                left: -10.5rem;
+            }
+            // display: none;       
+        }
+    }
+}
+
+.Test{
+    color: green;
+}
